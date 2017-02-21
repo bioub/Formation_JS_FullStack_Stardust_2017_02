@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Position</title>
+    <meta name="viewport" content="width=device-width">
+    <style>
+    body > div {
+      background-color: white;
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+    }
+
+    div div {
+      background-color: yellow;
+      width: 75px;
+      height: 75px;
+      
+      bottom: 0;
+      left: 0;
+      position: absolute;
+    }
+
+    .static {
+      margin-top: 20px;
+    }
+
+    .absolute {
+      top: 20px;
+      right: 20px;
+      position: absolute;
+    }
+
+    .relative {
+      top: 20px;
+      left: 20px;
+      position: relative;
+    }
+
+    .fixed {
+      bottom: 20px;
+      right: 20px;
+      position: fixed;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="static">
+      <div>static</div>
+    </div>
+    <div class="absolute">
+      <div>absolute</div>
+    </div>
+    <div class="relative">
+      <div>relative</div>
+    </div>
+    <div class="fixed">
+      <div>fixed</div>
+    </div>
+    <div class="static">
+      <div>static</div>
+    </div>
+  </body>
+</html>
