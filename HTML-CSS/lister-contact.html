@@ -42,45 +42,25 @@
   </nav>
   <!-- Commentaire HTML -->
   <div class="container">
-    <h2>Jean Dupont</h2>
-    <div class="row">
-      <div class="col-sm-2">
-        <b>Prénom</b>
-      </div>
-      <div class="col-sm-10">
-        Jean
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-2">
-        <b>Nom</b>
-      </div>
-      <div class="col-sm-10">
-        Dupont
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-2">
-        <b>Email</b>
-      </div>
-      <div class="col-sm-10">
-        jdupont@gmail.com
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-sm-2">
-        <b>Téléphone</b>
-      </div>
-      <div class="col-sm-10">
-        04 30 36 72 32
-      </div>
-    </div>
-    <a href="#" class="btn btn-default btn-sm">
-      <span class="glyphicon glyphicon-menu-left"></span> Liste des contacts
-    </a>
+    <h2>Liste des contacts</h2>
+    <table class="table table-striped">
+      <tr>
+        <th>Nom complet</th>
+        <th>Actions</th>
+      </tr>
+      <tr>
+        <td>Jean Dupont</td>
+        <td>
+          <a href="#" class="btn btn-primary btn-xs">Afficher</a>
+        </td>
+      </tr>
+      <tr>
+        <td>Eric Martin</td>
+        <td>
+          <a href="#" class="btn btn-primary btn-xs">Afficher</a>
+        </td>
+      </tr>
+    </table>
   </div>
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
