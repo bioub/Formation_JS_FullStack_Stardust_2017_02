@@ -36,3 +36,11 @@ console.log(typeof maintenant); // object
 // qui n'est pas une fonction)
 console.log(maintenant.getHours()); // 14
 
+var str = JSON.stringify(capitales);
+console.log(typeof str); // string
+console.log(str); // string
+
+// ... réseau ....
+
+var obj = JSON.parse(str);
+console.log(obj.france);

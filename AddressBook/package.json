@@ -1,0 +1,7 @@
+{
+  "name": "address-book",
+  "dependencies": {
+    "express": "^4.14.1",
+    "morgan": "^1.8.1"
+  }
+}

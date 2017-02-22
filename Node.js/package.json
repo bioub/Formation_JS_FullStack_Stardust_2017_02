@@ -1,0 +1,7 @@
+{
+  "name": "exemples-serveur-nodejs",
+  "dependencies": {
+    "express": "^4.12.4",
+    "morgan": "^1.8.1"
+  }
+}
