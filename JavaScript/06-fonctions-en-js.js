@@ -21,13 +21,27 @@ var addition = function(nb1, nb2) {
 // console.log(addition(1, '2')); // Error: Les params doivent être de type number
 
 // Convertir
+// en number avec Number() ou * 1
+// en string avec String() ou + ''
+// en booléen avec Boolean() ou !!
 var addition = function(nb1, nb2) {
   return Number(nb1) + Number(nb2);
 };
 
 console.log(addition(1, '2')); // 3
 
-// TODO Récupérer les params supplémentaires
+// Récupérer les params supplémentaires
+var addition = function() {
+  var result = 0;
+
+  for (var i=0; i<arguments.length; i++) {
+    result = result + arguments[i];
+  }
+
+  return result;
+};
+
+console.log(addition(1, 2, 3, 4)); // 10
 
 // Valeur par défaut
 var addition = function(nb1, nb2) {
@@ -75,6 +89,8 @@ setTimeout(function() {
 }, 1000);
 
 // Callback avec une function expression nommée (meilleure pratique) 
-setTimeout(function appelleMoiDans1seconde() {
+setTimeout(function rappelleMoi() {
   console.log('1 seconde écoulée');
 }, 1000);
+
+console.log(typeof rappelleMoi); // undefined
