@@ -14,3 +14,12 @@ function addition(nb1, nb2) {
 console.log(addition(2, 3)); // 5
 console.log(addition(4, 5)); // 9
 
+function genererEntierAleatoire(min, max) {
+  // var min = 20;
+  // var min = 0;
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+console.log(genererEntierAleatoire(20, 50)); // 37 par exemple
+console.log(genererEntierAleatoire(0, 100)); // 68 par exemple

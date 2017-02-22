@@ -80,3 +80,27 @@ console.log(padStart('ab', '0', 5)); // 000ab
 console.log(padStart('toto', '-', 9)); // -----toto
 // console.log('toto'.padStart('-', 9)); // -----toto
 
+// Exercices facultatifs
+// Reprogrammer les méthodes de Array
+
+// array.indexOf() => indexOf(array, )
+var nbs = [34, 26, 88, 53];
+
+console.log(nbs.indexOf(88)); // 2
+console.log(nbs.indexOf(34)); // 0
+console.log(nbs.indexOf(99)); // -1
+
+function indexOf(tab, valRecherche) {
+  for (var i=0; i<tab.length; i++) {
+    if (tab[i] === valRecherche) {
+      return i;
+    }
+  }
+
+  return -1;
+}
+
+// array.includes() => includes(array, 3)
+// array.slice() => slice(array)
+// reverse
+// find

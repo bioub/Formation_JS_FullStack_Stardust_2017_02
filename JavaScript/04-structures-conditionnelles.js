@@ -22,6 +22,7 @@ if (age % 2 === 0) {
 
 if (age % 10 === 0) {
   console.log("L'age est un multiple de 10");
+  console.log('Autre instruction');
 }
 else {
   console.log("L'age n'est pas un multiple de 10");

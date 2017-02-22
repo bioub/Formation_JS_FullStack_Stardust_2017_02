@@ -24,9 +24,4 @@ prenoms.forEach(function appelleMoiSurChaqueElementDuTableau(prenom, i) {
   console.log(prenom);
 });
 
-// array.indexOf() => indexOf(array, )
-// array.includes() => includes(array, 3)
-// array.slice() => slice(array)
-// reverse
-// find
 

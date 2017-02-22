@@ -17,6 +17,22 @@ console.log(typeof -10); // number
 console.log(typeof 10.10); // number
 console.log(typeof 1e3); // number (1 x 10^3 === 1000)
 console.log(typeof 0xff); // number (f x 16^1 + f x 16^0 === 15 x 16^1 + 15 x 16^0 === 255)
+console.log(typeof Infinity); // number
+console.log(typeof NaN); // number
+
+// Infinity
+console.log(10 / 0); // Infinity
+console.log(isFinite(10 / 0)); // false
+console.log(0 < Infinity); // true
+
+// NaN Not a Number
+// Resultat de type Number, mais impossible
+console.log(Math.sqrt(-1)); // NaN
+console.log(Number('abc')); // NaN
+console.log(1 + undefined); // NaN
+// Comparer NaN répondra toujours faux
+console.log(NaN === NaN); // false
+console.log(isNaN(NaN)); // true
 
 // Opérations arithmétiques (addition, soustraction...)
 console.log(2 + 3); // 5
