@@ -1,24 +1,24 @@
 var express = require('express');
+var morgan = require('morgan');
+var mongoose = require('mongoose');
 
-var contacts = [{
-  prenom: 'Steve',
-  nom: 'Jobs',
-  id: 123
-}, {
-  prenom: 'Bill',
-  nom: 'Gates',
-  id: 524
-}];
+var routesContact = require('./routes/contact');
+
+// Connexion à MongoDB (base addressbook)
+mongoose.connect('mongodb://localhost/addressbook');
 
 var app = express();
 
-// GET /api/contacts -> liste
-app.get('/api/contacts', function(req, res) {
-  res.json(contacts);
-});
-// GET /api/contacts/123 -> affiche
-app.get('/api/contacts/123', function(req, res) {
-  res.json(contacts[0]);
+app.use(morgan('dev'));
+
+// Enregistre les routes de routes/contact.js
+app.use(routesContact);
+
+app.use('/api', function(req, res, next) {
+  res.statusCode = 404;
+  res.json({
+    msg: 'Not found'
+  });
 });
 
 app.listen(8080, function() {

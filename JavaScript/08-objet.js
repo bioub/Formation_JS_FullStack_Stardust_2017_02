@@ -38,7 +38,7 @@ console.log(maintenant.getHours()); // 14
 
 var str = JSON.stringify(capitales);
 console.log(typeof str); // string
-console.log(str); // string
+console.log(str); // {"france":"Paris","espagne":"Madrid","allemagne":"Berlin"}
 
 // ... réseau ....
 

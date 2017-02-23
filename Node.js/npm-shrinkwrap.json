@@ -73,7 +73,7 @@
     },
     "express": {
       "version": "4.14.1",
-      "from": "express@>=4.12.4 <5.0.0",
+      "from": "express@latest",
       "resolved": "https://registry.npmjs.org/express/-/express-4.14.1.tgz"
     },
     "finalhandler": {
@@ -138,7 +138,7 @@
     },
     "morgan": {
       "version": "1.8.1",
-      "from": "morgan@>=1.8.1 <2.0.0",
+      "from": "morgan@latest",
       "resolved": "https://registry.npmjs.org/morgan/-/morgan-1.8.1.tgz",
       "dependencies": {
         "debug": {
