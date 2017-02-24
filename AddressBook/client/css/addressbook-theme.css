@@ -1,0 +1,16 @@
+.navbar-default {
+  background-color: papayawhip;
+  border-color: peachpuff;
+}
+
+.navbar-default .navbar-toggle {
+ border-color: peachpuff;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: peachpuff;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: peachpuff;
+}
