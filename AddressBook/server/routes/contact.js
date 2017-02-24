@@ -7,6 +7,9 @@ var routes = new Router();
 // GET /api/contacts -> liste
 routes.get('/api/contacts', function(req, res, next) {
   Contact.find(function(err, contacts) {
+    if (err) {
+      return next(err);
+    }
     res.json(contacts);
   });
 });
@@ -16,6 +19,11 @@ routes.post('/api/contacts', bodyParser.json());
 routes.post('/api/contacts', function(req, res, next) {
   var ctc = new Contact(req.body);
   ctc.save(function(err, contact) {
+
+    if (err) {
+      return next(err);
+    }
+
     res.statusCode = 201;
     res.json(contact);
   });
@@ -26,6 +34,10 @@ routes.get('/api/contacts/:id', function(req, res, next) {
   var id = req.params.id;
 
   Contact.findById(id, function(err, contact) {
+    if (err) {
+      return next(err);
+    }
+
     if (!contact) {
       return next();
     }
@@ -39,6 +51,10 @@ routes.delete('/api/contacts/:id', function(req, res, next) {
   var id = req.params.id;
 
   Contact.findByIdAndRemove(id, function(err, contact) {
+    if (err) {
+      return next(err);
+    }
+    
     if (!contact) {
       return next();
     }

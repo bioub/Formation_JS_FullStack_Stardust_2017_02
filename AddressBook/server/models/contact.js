@@ -1,8 +1,16 @@
 var mongoose = require('mongoose');
 
 var contactSchema = mongoose.Schema({
-    prenom: String,
-    nom: String
+    prenom: {
+        type: String,
+        required: true
+    },
+    nom: {
+        type: String,
+        required: true
+    },
+    email: String,
+    telephone: String
 });
 
 var Contact = mongoose.model('contacts', contactSchema);
