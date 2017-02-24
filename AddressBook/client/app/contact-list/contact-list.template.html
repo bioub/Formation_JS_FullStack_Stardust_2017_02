@@ -11,7 +11,8 @@
   <tr ng-repeat="contact in contacts | filter:filtreSaisi">
     <td>{{contact.prenom}} {{contact.nom | uppercase}}</td>
     <td>
-      <a href="#" class="btn btn-primary btn-xs">Afficher</a>
+      <a ui-sref="contact-show({id: contact._id})" class="btn btn-primary btn-xs">Afficher</a>
+      <a ui-sref="contact-delete({id: contact._id})" class="btn btn-danger btn-xs">Supprimer</a>
     </td>
   </tr>
 </table>

@@ -1,0 +1,39 @@
+<h2>{{contact.prenom}} {{contact.nom}}</h2>
+<div class="row">
+  <p class="col-sm-2">
+    <b>Prénom</b>
+  </p>
+  <p class="col-sm-10">
+    {{contact.prenom}}
+  </p>
+</div>
+
+<div class="row">
+  <p class="col-sm-2">
+    <b>Nom</b>
+  </p>
+  <p class="col-sm-10">
+    {{contact.nom}}
+  </p>
+</div>
+
+<div class="row" ng-if="contact.email">
+  <p class="col-sm-2">
+    <b>Email</b>
+  </p>
+  <p class="col-sm-10">
+    {{contact.email}}
+  </p>
+</div>
+
+<div class="row" ng-if="contact.telephone">
+  <p class="col-sm-2">
+    <b>Téléphone</b>
+  </p>
+  <p class="col-sm-10">
+    {{contact.telephone}}
+  </p>
+</div>
+<a ui-sref="contact-list" class="btn btn-default btn-sm">
+  <span class="glyphicon glyphicon-menu-left"></span> Liste des contacts
+</a>

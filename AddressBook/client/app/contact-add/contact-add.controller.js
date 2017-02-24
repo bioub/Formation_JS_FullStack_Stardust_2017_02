@@ -3,10 +3,18 @@
 (function () {
   'use strict';
   
-  var module = angular.module('contact-add.controller', []);
+  var module = angular.module('contact-add.controller', [
+    'ui.router'
+  ]);
 
-  module.controller('ContactAddCtrl', function($scope, $http) {
-    console.log('ContactAddCtrl');
+  module.controller('ContactAddCtrl', function($scope, $http, $state) {
+    
+    $scope.add = function() {
+      $http.post('/api/contacts', $scope.contact)
+        .then(function(res) {
+          $state.go('contact-list');
+        }); 
+    };
   });
 
 }());
