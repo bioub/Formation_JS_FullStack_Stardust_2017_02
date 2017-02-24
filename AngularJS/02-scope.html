@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="node_modules/angular/angular.js"></script>
+</head>
+<body ng-app>
+  <div>
+    Prénoms : <input ng-model="prenoms" ng-list>
+  </div>
+  <p ng-repeat="prenom in prenoms track by $index">
+    Bonjour <span ng-bind="prenom"></span> !
+  </p>
+<!--
+4 - scope :
+En JavaScript l'existence d'une variable est limitée
+par une fonction, dans AngularJS c'est certaines balises
+(directive ng-app et ng-repeat créée des scopes)
+En JS c'est un objet sur lequel sont créées les variable
+
+function ngApp() {
+  var prenoms = ['Romain', 'Eric'];
+
+  function ngRepeat1() {
+    var prenom = 'Romain';
+    console.log(prenom);
+  }
+
+  function ngRepeat2() {
+    var prenom = 'Eric';
+    console.log(prenom);
+  }
+}
+
+Pour débugger le scope dans la console de Chrome :
+($0 la balise selectionnée dans l'onglet element
+de DevTools de Chrome)
+angular.element($0).scope()
+-->
+</body>
+</html>

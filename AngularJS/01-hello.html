@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="node_modules/angular/angular.js"></script>
+</head>
+<body ng-app>
+  <div>
+    Prénom : <input ng-model="prenom">
+  </div>
+  <p>
+    Bonjour <span ng-bind="prenom"></span> !
+  </p>
+<!--
+1 - directive : attribut prédéfini, soit dans angular
+soit dans un plugin open source, soit qu'on a nous
+meme écrit, qui cache du JavaScript
+2 - compilation : au chargement de la page les
+directive sont transformée en JS + HTML
+3 - data binding : création d'un lien entre une
+variable et le html (si le html change la variable
+change pour ng-model, si la variable change le
+html change pour ng-bind et ng-model
+-->
+</body>
+</html>
