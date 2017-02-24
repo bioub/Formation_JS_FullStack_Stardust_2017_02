@@ -26,6 +26,10 @@ routes.get('/api/contacts/:id', function(req, res, next) {
   var id = req.params.id;
 
   Contact.findById(id, function(err, contact) {
+    if (!contact) {
+      return next();
+    }
+
     res.json(contact);
   });
 });
@@ -35,6 +39,10 @@ routes.delete('/api/contacts/:id', function(req, res, next) {
   var id = req.params.id;
 
   Contact.findByIdAndRemove(id, function(err, contact) {
+    if (!contact) {
+      return next();
+    }
+    
     res.json(contact);
   });
 });
