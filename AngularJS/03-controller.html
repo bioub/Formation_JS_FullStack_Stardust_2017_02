@@ -24,7 +24,18 @@
     });
   </script>
 <!--
-
+5 - controller : fonction JS qui permet de communiquer avec le HTML
+grâce au scope (variable $scope)
+6 - injection de dépendance : dans un controller (et d'autres fonction
+également), on ne peut pas nommer les arguments comme on le veut,
+à la place on nomme les arguments comme les dépendances (objets ou fonctions)
+du controller (ici le controleur dépends du scope avec $scope)
+7 - module : pour éviter les conflits de noms, on déclare les controllers
+dans des modules, libre à vous d'importer ou non un module (similaire
+aux require et module.exports de node.js)
+La bonne pratique : 1 fichier JS = 1 module
+Ensuite ng-app permet d'indiquer le module principal (par lequel
+on commence)
 -->
 </body>
 </html>
